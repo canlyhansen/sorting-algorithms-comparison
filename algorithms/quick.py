@@ -32,3 +32,8 @@ def quick_sort(arr):
 
 # keep recursion until array is sorted: [2,3,4,5]
 # combine [2,3,4,5] + [8] + [] = [2,3,4,5,8]
+
+# Complexity:
+# Mean: O(n log n)
+# Worst case: O(n²) (if pivots are on the wrong positions)
+# Space: bigger since it creates new list (not in-place)
