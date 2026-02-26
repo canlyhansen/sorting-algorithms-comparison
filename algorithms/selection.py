@@ -12,3 +12,13 @@ def selection_sort(arr):
                 min_idx = j
         arr[i], arr[min_idx] = arr[min_idx], arr[i]  # order is switched, so that the front position is the smallest number
     return arr
+
+# Example:
+# arr = [64, 25, 12, 22, 11]
+# First iteration: 
+# [11, 25, 12, 22, 64]
+# Second iteration: 
+# [11, 12, 25, 22, 64]
+# Third iteration: 
+# [11, 12, 22, 25, 64]
+# and so on
