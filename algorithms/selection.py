@@ -22,3 +22,7 @@ def selection_sort(arr):
 # Third iteration: 
 # [11, 12, 22, 25, 64]
 # and so on
+
+# Complexity: 
+# Time Complexity: O(n²) (loop in loop)
+# Space Complexity: O(1) (in-place, but a copy in front)
