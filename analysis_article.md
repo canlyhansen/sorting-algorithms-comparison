@@ -12,16 +12,25 @@ Insertion Sort works step by step. It takes one element and places it in the cor
 
 In general, both algorithms have the same average and worst-case time complexity:
 
+$$
+T(n) = O(n^2)
+$$
 
 This means the running time increases quickly as the data size becomes larger.
 
 However, Insertion Sort has a better best-case time complexity when the data is already sorted:
 
+$$
+T(n) = O(n)
+$$
 
 Selection Sort does not change its behavior, even if the data is sorted.
 
 For space usage, both algorithms are efficient because they only need:
 
+$$
+S(n) = O(1)
+$$
 
 This means they do not need extra memory that grows with input size.
 
@@ -31,9 +40,9 @@ To compare performance, I used time.perf_counter() in Python to measure executio
 
 There were two types of data:
 
-Random data
+- Random data
 
-Already sorted data
+- Already sorted data
 
 Each algorithm was tested using the same datasets to make the comparison fair.
 
@@ -47,9 +56,9 @@ For sorted data, the difference was clear. Insertion Sort became much faster bec
 
 Insertion Sort is a good choice for:
 
-Small datasets
+- Small datasets
 
-Nearly sorted data
+- Nearly sorted data
 
 Selection Sort is mostly useful for learning purposes because it is easy to understand.
 
@@ -60,3 +69,4 @@ For large datasets, both algorithms are not recommended. Faster algorithms with 
 Both Selection Sort and Insertion Sort are simple and important to learn. They help us understand how sorting works and how time complexity affects performance.
 
 Even though they are not used often in real systems, learning these basic algorithms builds a strong foundation before moving to more advanced sorting methods.
+
