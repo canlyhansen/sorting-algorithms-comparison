@@ -2,8 +2,8 @@ import random
 import time
 import matplotlib.pyplot as plt
 
-from algorithms.insertion import insertion
-from algorithms.selection import selection
+from algorithms.insertion import insertion_sort
+from algorithms.selection import selection_sort
 
 
 # ==============================
@@ -21,7 +21,7 @@ def benchmark(sort_func, arr):
 # Run Benchmark
 # ==============================
 
-sizes = [100, 500, 1000, 2000]
+sizes = [100, 1000, 3000]
 
 selection_random = []
 insertion_random = []
