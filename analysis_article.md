@@ -1,170 +1,62 @@
-# 📊 Performance Analysis: Selection Sort vs Insertion Sort
-## 📌 Project Overview
+# Analysis and Comparasion Sorting Algorithms: Selection Sort vs Insertion Sort
 
-This project analyzes and compares the performance of two fundamental sorting algorithms:
+Sorting is one of the basic topics in programming. In this article, I compare two simple sorting algorithms: Selection Sort and Insertion Sort. The goal is to understand how they work and see how fast they run in different situations.
 
-- Selection Sort
+## Short Explanation of Each Algorithm
 
-- Insertion Sort
+Selection Sort works by finding the smallest value in the unsorted part of the list and moving it to the front. It repeats this step until all data is sorted. The process is simple, but it always checks the remaining data fully, even if the list is already sorted.
 
-The objective of this analysis is to:
+Insertion Sort works step by step. It takes one element and places it in the correct position among the elements that are already sorted. Because of this, it can work much faster if the data is already sorted or almost sorted.
 
-- Understand how each algorithm works
+## Time and Space Complexity
 
-- Compare their theoretical time and space complexity
+In general, both algorithms have the same average and worst-case time complexity:
 
-- Measure empirical performance using Python benchmarking
 
-- Analyze performance differences on random and sorted data
+This means the running time increases quickly as the data size becomes larger.
 
-## 🔎 1. Algorithm Overview
+However, Insertion Sort has a better best-case time complexity when the data is already sorted:
 
-### 1.1 Selection Sort
 
-Selection Sort works by repeatedly selecting the smallest element from the unsorted portion and placing it at the beginning.
+Selection Sort does not change its behavior, even if the data is sorted.
 
-Key Characteristics:
+For space usage, both algorithms are efficient because they only need:
 
-- Always performs the same number of comparisons
 
-- Not adaptive (performance does not improve if data is sorted)
+This means they do not need extra memory that grows with input size.
 
-- Simple implementation
+## Testing Method
 
-### 1.2 Insertion Sort
+To compare performance, I used time.perf_counter() in Python to measure execution time. I tested different data sizes: 100, 500, 1000, and 2000 elements.
 
-Insertion Sort builds the sorted array gradually by inserting each new element into its correct position within the already sorted portion.
+There were two types of data:
 
-Key Characteristics:
+Random data
 
-- Adaptive (performance improves if data is nearly sorted)
+Already sorted data
 
-- Efficient for small datasets
+Each algorithm was tested using the same datasets to make the comparison fair.
 
-- Used in hybrid sorting algorithms
+## Results and Discussion
 
-## 📐 2. Theoretical Time Complexity
+For random data, both algorithms showed similar behavior. The running time increased a lot when the input size increased. Insertion Sort was usually a bit faster because it stops moving elements once the correct position is found. Selection Sort always scans the remaining list completely.
 
-Both algorithms have quadratic growth in average and worst-case scenarios.
+For sorted data, the difference was clear. Insertion Sort became much faster because it only needed small checks and almost no shifting. Its performance was close to linear time. Selection Sort, on the other hand, still checked all remaining elements every time, so its speed did not improve much.
 
-| Case             | Selection Sort | Insertion Sort |
-| ---------------- | -------------- | -------------- |
-| Best Case        | O(n²)          | O(n)           |
-| Average Case     | O(n²)          | O(n²)          |
-| Worst Case       | O(n²)          | O(n²)          |
-| Space Complexity | O(1)           | O(1)           |
+## Practical Use
 
+Insertion Sort is a good choice for:
 
-**Important Insight**
+Small datasets
 
-- Selection Sort always performs ~n² comparisons.
+Nearly sorted data
 
-- Insertion Sort adapts to input structure.
+Selection Sort is mostly useful for learning purposes because it is easy to understand.
 
-- On already sorted data, Insertion Sort runs in linear time:
+For large datasets, both algorithms are not recommended. Faster algorithms with O(n log n) complexity are better for real applications.
 
-## 🧪 3. Benchmark Methodology
+## Conclusion
 
-Benchmarking was performed using:
+Both Selection Sort and Insertion Sort are simple and important to learn. They help us understand how sorting works and how time complexity affects performance.
 
-- time.perf_counter() for execution timing
-
-- Multiple input sizes: 100, 500, 1000, 2000
-
-- Two data conditions:
-    - Random data
-    - Already sorted data
-
-Each algorithm was tested independently using identical datasets.
-
-## 📊 4. Benchmark Results
-
-### 4.1 Random Data
-
-Observations:
-
-- Both algorithms show quadratic growth.
-
-- Execution time increases significantly as input size increases.
-
-- Insertion Sort is generally slightly faster than Selection Sort.
-
-**Why?**
-
-Selection Sort always scans the entire unsorted portion.
-
-Insertion Sort stops shifting elements once the correct position is found.
-
-### 4.2 Sorted Data
-
-This is where the difference becomes significant.
-
-Observations:
-
-- Selection Sort performance remains O(n²).
-
-- Insertion Sort performance improves dramatically.
-
-- Insertion Sort approaches linear time complexity.
-
-**Explanation**
-
-Insertion Sort only performs minimal comparisons when the array is already ordered.
-
-Selection Sort still performs full scans regardless of input condition.
-
-## 📈 5. Performance Interpretation
-
-Algorithm Adaptability
-
-Selection Sort:
-
-- Non-adaptive
-
-- Predictable but inefficient
-
-Insertion Sort:
-
-- Adaptive
-
-- Highly sensitive to input order
-
-**Practical Implications**
-
-| Scenario            | Recommended Algorithm               |
-| ------------------- | ----------------------------------- |
-| Small dataset       | Insertion Sort                      |
-| Nearly sorted data  | Insertion Sort                      |
-| Educational purpose | Both                                |
-| Large dataset       | Neither (use O(n log n) algorithms) |
-
-
-## ⚠️ Limitations
-
-- Quadratic complexity makes both algorithms unsuitable for large-scale systems.
-
-- Benchmark results may vary depending on hardware.
-
-- Not compared against modern algorithms (Merge Sort, Quick Sort, Timsort).
-
-## 🏁 6. Conclusion
-
-This analysis demonstrates that:
-
-1. Both algorithms have O(n²) average complexity.
-
-2. Insertion Sort is adaptive, while Selection Sort is not.
-
-3. Insertion Sort significantly outperforms Selection Sort on nearly sorted data.
-
-4. Neither algorithm is suitable for large datasets compared to O(n log n) algorithms.
-
-Although rarely used in production systems, both algorithms are essential for understanding:
-
-- Fundamental sorting mechanics
-
-- Algorithm complexity growth
-
-- The impact of input structure on performance
-
-Mastering these basic algorithms provides a strong foundation for understanding more advanced sorting techniques.
+Even though they are not used often in real systems, learning these basic algorithms builds a strong foundation before moving to more advanced sorting methods.
