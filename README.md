@@ -1,5 +1,4 @@
-"""
-Sorting Algorithm Performance Comparison — Explanation
+## Sorting Algorithm Performance Comparison — Explanation
 
 Description:
 This project analyzes and compares the performance of two sorting algorithms. They are Insertion Sort and Selection Sort.
