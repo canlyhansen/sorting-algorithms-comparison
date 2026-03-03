@@ -1,7 +1,8 @@
-from algorithms.insertion import insertion
-from algorithms.selection import selection
+from algorithms.insertion import insertion_sort
+from algorithms.selection import selection_sort
 
-from benchmark_and_visualization import benchmark_visualization
+from benchmark_and_visualization import run_benchmark
+from benchmark_and_visualization import plot_results
 
 algorithms = {
     "Insertion": insertion,
@@ -9,7 +10,7 @@ algorithms = {
 }
 
 sizes = [100, 1000, 3000]
-cases = ["random", "sorted", "reversed"]
+cases = ["random", "sorted"]
 
 results = run_benchmark(algorithms, sizes, cases)
 
