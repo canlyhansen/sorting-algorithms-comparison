@@ -19,8 +19,9 @@ This is important because some algorithms perform differently depending on input
 Data Sizes:
 The experiments use multiple input sizes to observe scalability:
 - 100 elements
-- 1000 elements
-- 3000 elements
+- 500 elements
+- 2000 elements
+- 10000 elements
 
 This helps analyze how performance grows as the dataset becomes larger.
 
