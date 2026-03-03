@@ -14,7 +14,6 @@ Dataset Types:
 The algorithms are tested on three types of input data:
 - Random data: Unsorted random integers
 - Sorted data: Already sorted list
-- Reversed data: Descending order list
 This is important because some algorithms perform differently depending on input order.
 
 Data Sizes:
@@ -30,11 +29,10 @@ This allows objective comparison instead of relying only on theoretical complexi
 
 Expected Results / Insights:
 1. Both algorithms have O(n^2) complexity, so they become very slow when the input size increases significantly.
-2. Input order (random, sorted, reversed) can strongly affect runtime, showing that algorithm performance depends on data characteristics.
+2. Input order (random and sorted) can strongly affect runtime, showing that algorithm performance depends on data characteristics.
 
 Big Picture Summary:
 This project follows a complete analytical workflow:
-
 1. Implement sorting algorithms
 2. Generate datasets of different types and sizes
 3. Benchmark execution time
