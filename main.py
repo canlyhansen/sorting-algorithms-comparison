@@ -9,7 +9,7 @@ algorithms = {
     "Selection": selection,
 }
 
-sizes = [100, 1000, 3000]
+sizes = [100, 500, 2000, 10000]
 cases = ["random", "sorted"]
 
 results = run_benchmark(algorithms, sizes, cases)
