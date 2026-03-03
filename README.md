@@ -21,6 +21,7 @@ The experiments use multiple input sizes to observe scalability:
 - 100 elements
 - 1000 elements
 - 3000 elements
+
 This helps analyze how performance grows as the dataset becomes larger.
 
 Time Measurement:
