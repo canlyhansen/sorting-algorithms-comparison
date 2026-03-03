@@ -5,8 +5,8 @@ from benchmark_and_visualization import run_benchmark
 from benchmark_and_visualization import plot_results
 
 algorithms = {
-    "Insertion": insertion,
-    "Selection": selection,
+    "Insertion": insertion_sort,
+    "Selection": selection_sort,
 }
 
 sizes = [100, 500, 2000, 10000]
