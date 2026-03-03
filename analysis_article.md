@@ -1,6 +1,6 @@
 # Analysis and Comparasion Sorting Algorithms: Selection Sort vs Insertion Sort
 
-Sorting is one of the basic topics in programming. In this article, I compare two simple sorting algorithms: Selection Sort and Insertion Sort. The goal is to understand how they work and see how fast they run in different situations.
+Sorting is one of the basic topics in programming. In this article, we compare two simple sorting algorithms: Selection Sort and Insertion Sort. The goal is to understand how they work and see how fast they run in different situations.
 
 ## Short Explanation of Each Algorithm
 
@@ -36,7 +36,7 @@ This means they do not need extra memory that grows with input size.
 
 ## Testing Method
 
-To compare performance, I used time.perf_counter() in Python to measure execution time. I tested different data sizes: 100, 500, 1000, and 2000 elements.
+To compare performance, we used time.perf_counter() in Python to measure execution time. We tested different data sizes: 100, 500, 2000, and 10000 elements.
 
 There were two types of data:
 
@@ -69,4 +69,5 @@ For large datasets, both algorithms are not recommended. Faster algorithms with 
 Both Selection Sort and Insertion Sort are simple and important to learn. They help us understand how sorting works and how time complexity affects performance.
 
 Even though they are not used often in real systems, learning these basic algorithms builds a strong foundation before moving to more advanced sorting methods.
+
 
