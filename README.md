@@ -1,6 +1,5 @@
-## Sorting Algorithm Performance Comparison — Explanation
+## Sorting Algorithm Performance Comparison
 
-Description:
 This project analyzes and compares the performance of two sorting algorithms. They are Insertion Sort and Selection Sort.
 The goal is not only to implement these algorithms, but also to evaluate how efficient they are in terms of execution time and scalability when handling different types of data.
 
